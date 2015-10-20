@@ -31,8 +31,8 @@ eval "$(pyenv init -)"
 autoload colors
 colors
 
-PROMPT="%n:%~ %# "
-PROMPT="%n:%~ %(2L.#%L .)%# "
+# PROMPT="%n:%~ %# "
+# PROMPT="%n:%~ %(2L.#%L .)%# "
 
 ########################################
 # 補完
@@ -65,30 +65,19 @@ function cd() {
 }
 setopt auto_cd
 setopt pushd_ignore_dups
-setopt correct
 setopt prompt_subst
 
 case ${UID} in
 0)
 	# root User
-	PROMPT="%F{red}%B%U[%n@%D{%m/%d %T}]%u%b%f %# "
-	PROMPT2="%{${fg[red]}%}%_> %{${reset_color}%}"
-	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
-	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PROMPT="%F{magenta}%B%D{%m/%d %T} [%!]%b%f
-%F{red}[%n@%m]%f %# "
+	PROMPT=$'%(6~|[%~]\n|)%F{red}%B%U[%n@%D{%m/%d %T}]%u%b%f %# '
+	RPROMPT="%{${fg[green]}%}%(6~||[%~])%{${reset_color}%}"
 	;;
 
 *)
 	# Normal User
-	PROMPT="%F{cyan}[%n@%D{%m/%d %T}]%f %# "
-	PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
-	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
-	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PROMPT="%F{blue}%B%D{%m/%d %T} [%!]%b%f
-%F{cyan}[%n@%m]%f %# "
+	PROMPT=$'%(6~|[%~]\n|)%F{cyan}[%n@%D{%m/%d %T}]%f %# '
+	RPROMPT='%{${fg[green]}%}%(6~||[%~])%{${reset_color}%}'
 	;;
 
 esac
