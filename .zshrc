@@ -25,9 +25,6 @@ export ZLS_COLORS=$LS_COLORS
 export CLICOLOR=true
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-eval "$(rbenv init -)"
-eval "$(pyenv init -)"
-
 autoload colors
 colors
 
@@ -84,3 +81,5 @@ esac
 
 DISABLE_AUTO_TITLE="true"
 export HOMEBREW_CACHE=~/Library/Caches/Homebrew
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
