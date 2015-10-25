@@ -62,6 +62,21 @@ setopt auto_pushd
 function cd() {
    builtin cd $@ && ls -GF;
 }
+
+function take() {
+	mkdir -p "$@" && eval cd "\"\$$#\"";
+}
+
+function show() {
+	defaults write com.apple.finder AppleShowAllFiles -boolean true;
+	killall Finder;
+}
+
+function hide() {
+	defaults delete com.apple.finder AppleShowAllFiles;
+	killall Finder;
+}
+
 setopt auto_cd
 setopt pushd_ignore_dups
 setopt prompt_subst
