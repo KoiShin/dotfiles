@@ -11,11 +11,13 @@ path=(
 )
 
 alias ls='ls -FG'
-alias ll='ls -la'
+alias ll='ls -l'
+alias l='ls -al'
 alias la='ls -a'
 alias lss='sudo tmutil disablelocal && sudo tmutil enablelocal'
 alias -g ...='../..'
 alias -g ....='../../..'
+alias -g .....='../../../..'
 alias -s rb=ruby py=python
 
 # export LSCOLORS=gxfxcxdxhxegedabagacad
