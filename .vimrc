@@ -8,7 +8,7 @@ set nolist
 set wrap
 set display=lastline
 set showcmd
-set title
+" set title
 set virtualedit=block
 
 set laststatus=2
