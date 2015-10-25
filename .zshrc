@@ -2,7 +2,7 @@ export LANG=ja_JP.UTF-8
 export CC=clang
 export CXX=clang++
 
-PATH="$PATH":"/Users/koishin/.script"
+PATH="$PATH":"/Users/koishin/.scripts"
 
 typeset -U path
 path=(
