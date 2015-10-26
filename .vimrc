@@ -58,6 +58,7 @@ set t_Co=256
 set cursorline
 
 set mouse=a
+set ttymouse=xterm2
 set nostartofline
 set autoread
 set hidden
