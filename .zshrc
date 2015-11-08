@@ -96,6 +96,15 @@ case ${UID} in
 
 esac
 
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=100
+export SAVEHIST=1000
+setopt hist_ignore_dups
+setopt EXTENDED_HISTORY
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+
 DISABLE_AUTO_TITLE="true"
 export HOMEBREW_CACHE=~/Library/Caches/Homebrew
 export PATH="$HOME/.anyenv/bin:$PATH"
