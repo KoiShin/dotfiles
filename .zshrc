@@ -49,8 +49,6 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 # sudo の後ろでコマンド名を補完する
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                     /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
-zstyle ':completion:*:make:*' command-path /usr/local/sbin /usr/local/bin \
-                    /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 
 zstyle ':completion:*:descriptions' format '%BCompleting %d%b'
 zstyle ':completion:*:messages' format '%d'
