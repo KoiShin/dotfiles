@@ -66,12 +66,12 @@ function take() {
 	mkdir -p "$@" && eval cd "\"\$$#\"";
 }
 
-function show() {
+function showext() {
 	defaults write com.apple.finder AppleShowAllFiles -boolean true;
 	killall Finder;
 }
 
-function hide() {
+function hideext() {
 	defaults delete com.apple.finder AppleShowAllFiles;
 	killall Finder;
 }
