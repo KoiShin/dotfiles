@@ -20,6 +20,7 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -s rb=ruby py=python
+alias clangpp='clang++ -std=c++14'
 
 # export LSCOLORS=gxfxcxdxhxegedabagacad
 export LSCOLORS=exfxcxdxbxegedabagacad
